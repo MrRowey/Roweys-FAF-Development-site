@@ -1,5 +1,5 @@
 <?php 
-    // incluing the config file
+  /*  // incluing the config file
     require_once "config.php";
 
     // defining variables and strat them with blank values
@@ -90,7 +90,7 @@
 
         // Close connection
         mysqli_close($link);
-    }
+    }*/
 ?>
 <html>
 <head>

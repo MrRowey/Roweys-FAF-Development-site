@@ -1,6 +1,6 @@
 <html>
 <?php
-include '/config.php';
+include('../config.php');
 ?>
 <head>
     <title>Add Players</title>
@@ -13,11 +13,10 @@ include '/config.php';
     </ul>
 </nav>
 <main>
-<h1>Adding Players</h1>
-<h4>Adding Player whom have played in a 1v1 with a prizepool more than $50</h4>
+<h1 class="player-h1">Adding Players</h1>
+<p class="player-p">Please Add the Name of the Player you need to add to the data base </p>
 
-<form class="login" action="/add_players.php" method="post">
-    <label for="player">Username:</label><br>
+<form class="add" action="/add/add_players.php" method="post">
     <input type="text" name="player" id="player"><br>
     <input type="submit" value="Submit">
 </form> 
@@ -33,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO players (name) VALUES ('$player')";
         if(mysqli_query($link, $sql)){
         echo "Record Added";
+        header("location: ../index.php");
         } else {
         echo "Error: Could not execute $sql. " . mysqli_error($link);
         }
