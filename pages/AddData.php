@@ -1,6 +1,9 @@
+<?php
+include('../dbconfig.php');
+?>
 <html>
 <head>
-    <title>FAF Tournament Match Data</title>
+<title>FAF Tournament Match Data</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,9 +16,14 @@
     <!--<a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>-->
     <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
 </nav>
-<main w3-container>
-    <h1> FAF Tournament Match Data</h1>
-    <p> This site is to display and look up Tournament data. Currenly 1v1 Data is only mesured at anything with a min of $50 Prize pool</p>
-    <img src="/images/1.jpg" alt="FAF Image">
+<main>
+    <div class="w3-row">
+        <div class="w3-col s4 w3-center"><a class="w3-button w3-green" href="/data/players.php">Add Players</a></div>
+        <div class="w3-col s4 w3-center"><a class="w3-button w3-green" href="/data/maps.php">Add Maps</a></div>
+        <div class="w3-col s4 w3-center"><a class="w3-button w3-green" href="/data//tournament.php">Add Tournaments</a></div>
+    </div>
+    <h1>Users</h1>
+    <h4>List of all the player who have player in a 1v1 Tournamnet wiht a Prise Pool of over $50</h4>
+
 </main>
 </html>

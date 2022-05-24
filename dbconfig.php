@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect('localhost','faf_admin','xErAOYRgqOf10wbu','faf_tournaments');
+$conn = mysqli_connect('localhost','FAFDB','DRHM*KGpjFQCCQtE','faf-data');
 
 if (mysqli_connect_errno()) {
 	// If there is an error with the connection, stop the script and display the error.
