@@ -6,8 +6,13 @@ include('../dbconfig.php');
 
 ## Need to Get Player Name from Both Alias & User but also know who Alis - Whom
 
+## Get User's & Alias Names
+$playersSQL = 'SELECT ID,Username FROM user';
+$playersResult = mysqli_query($conn, $userSQL);
 
-
+## Get Alias
+$aliasSQL = 'SELECT A.ID, A.Alias, U.Username FROM user AS U, alias_to_user AS A where A.UsernameID = U.ID;';
+$aliasResult = mysqli_query($conn, $aliasSQL);
 
 
 # Player
@@ -78,9 +83,16 @@ $tournyResult = mysqli_query($conn,$tournySQL);
         </div><br>
         <div class="w3-row-padding">
             <!-- Player -->
-            <!--<label for=""></label>-->
-            <!--<select class="w3-select w3-border" name="" id=""></select>-->
+            <label for=""></label>
+                <select class="w3-select w3-border" name="" id="">
+                <option value="" disabled selected>Select Player</option>                  
+                    <?php while($row = mysqli_fetch_array()) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+                    }?>
 
+
+
+                </select>
 
             <!-- Opponet -->
             <!--<label for=""></label>-->
