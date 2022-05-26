@@ -1,52 +1,30 @@
 <?php
 include('../dbconfig.php');
 
-$targetDir = "images/maps/";
-$fileName = basename($_FILES["file"]["name"]);
-$targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    // Allow certain file formats
-    $allowTypes = array('jpg','png','jpeg','gif','pdf');
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            // Insert image file name into database
-            $insert = $conn->query("INSERT into maps (fileName) VALUE ('".$fileName."', NOW())");
-            if($insert){
-                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            }else{
-                $statusMsg = "File upload failed, please try again.";
-            } 
-        }else{
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-    }else{
-        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
-    }
-}else{
-    $statusMsg = 'Please select a file to upload.';
-}
-
-
 if(empty($_POST['mapName'])) {
     $nameErr = "Map Details Are Required";
 }
 else {
+    // Add Map Image
+
+
+
+    // Add Duplication Check
+
     $mapName = mysqli_real_escape_string($conn,$_REQUEST['mapName']);
     $mapSize = mysqli_real_escape_string($conn,$_REQUEST['mapSize']);
     $sql = "INSERT INTO maps (Name,Size) VALUES ('$mapName',$mapSize)";
     if(mysqli_query($conn, $sql)){
     echo "Record Added";
-    header("location: ../index.php");
+    //header("location: ../index.php");
     } else {
     echo "Error: Could not execute $sql. " . mysqli_error($conn);
     }
 }
 
-// Display status message
-echo $statusMsg;
+$sql = 'SELECT * FROM maps';
+$result = mysqli_query($conn,$sql);
+
 ?>
 <html>
 <title>FAF Tournament Match Data</title>
@@ -68,13 +46,30 @@ echo $statusMsg;
 
     <form class="w3-container" action="/data/maps.php" method="post">
         <label>Map Name</label> 
-        <input type="text" name="mapName" id="mapName"><br><br>
+        <input class="w3-input w3-animate-input" style="width:30% ;" type="text" name="mapName" id="mapName"><br><br>
         <label>Map Size</label> 
-        <input type="number" name="mapSize" id="mapSize"><br><br>
-        <label>Upload Map Image</label> 
-        <input type="file" name="file" id="mapImg"><br><br>
+        <input class="w3-input" style="width:30% ;" type="number" name="mapSize" id="mapSize"><br><br>
         <input class="w3-button w3-green" type="submit" value="Submit">
-
     </form> 
+
+    <?php
+    if($result->num_rows > 0) {
+        echo "<table class='w3-table'>";
+        echo "<tr class='w3-blue'>";
+        echo "<th>Map ID</th>";
+        echo "<th>Map Name</th>";
+        echo "<th>Map Size</th>";
+        echo "</tr>";
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['ID'] . "</td>";
+            echo "<td>" . $row['Name'] . "</td>";
+            echo "<td>" . $row['Size'] . " Km</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "0 Results";
+    }?>
 </main>
 </html>

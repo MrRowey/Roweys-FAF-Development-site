@@ -2,15 +2,18 @@
 include('../dbconfig.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(empty($_POST['player'])) {
+    if(empty($_POST['alias'])) {
         $nameErr = "Username is Required";
     }
     else {
-        // Add Duplicaton Check
-
-        $player = mysqli_real_escape_string($conn,$_REQUEST['player']);
-
-        $sql = "INSERT INTO user (Username) VALUES ('$player')";
+        // Add Duplication Check
+        
+        
+        $alias = $_POST['alias'];
+        $username = $_POST['username'];
+        
+        $sql = "INSERT INTO alias_to_user (Alias,UsernameID) VALUES ('$alias',$username)";
+        
         if(mysqli_query($conn, $sql)){
         echo "Record Added";
         //header("location: ../index.php");
@@ -20,9 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-## Add Table of all Users
 $sql = 'SELECT ID,Username FROM user';
 $result = mysqli_query($conn,$sql);
+
+$sql2 = 'SELECT * FROM user AS U, alias_to_user AS A WHERE A.UsernameID = U.ID';
+$result2 = mysqli_query($conn,$sql2);
 
 ?>
 <html>
@@ -41,23 +46,36 @@ $result = mysqli_query($conn,$sql);
     <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
 </nav>
 <div class="w3-container">
-    <h1 class="player-h1">Adding User</h1>
-    <p class="player-p">Please Add the Name of the Player you need to add to the data base </p>
-    <form class="add" action="/data/players.php" method="post">
-        <input type="text" name="player" id="player"><br><br>
-        <input class="w3-button w3-green w3-round" type="submit" value="Submit">
-    </form>    
+    <h1 class="player-h1">Adding Players Alias</h1>
+    <p class="player-p">This is the renames players have used</p>
 
+    <form class="add" action="/data/alias.php" method="post">
+        <label >Select User</label><br>
+        <select name="username" id="username" class="w3-select w3-border w3-round" style="width: 50% ;">
+        <option value="" disabled selected>Please Select a Username</option>
+        <?php 
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<option value="' . $row['ID'] . '">' . $row['Username'] . '</option>';
+            }        
+        ?>   
+        </select><br>
+        <label>Enter Alias For User</label><br>
+        <input class="w3-input w3-animate-input w3-round" style="width:25%; max-width:50%" type="text" name="alias" id="alias"><br><br>
+        <input class="w3-button w3-green w3-round" type="submit" value="Submit">
+    </form> 
+    
     <?php
-    if($result->num_rows > 0) {
+    if($result2->num_rows > 0) {
         echo "<table class='w3-table'>";
         echo "<tr class='w3-blue'>";
         echo "<th>User ID</th>";
+        echo "<th>Alias</th>";
         echo "<th>Username</th>";
         echo "</tr>";
-        while($row = mysqli_fetch_assoc($result)) {
+        while($row = mysqli_fetch_assoc($result2)) {
             echo "<tr>";
             echo "<td>" . $row['ID'] . "</td>";
+            echo "<td>" . $row['Alias'] . "</td>";
             echo "<td>" . $row['Username'] . "</td>";
             echo "</tr>";
         }
@@ -65,5 +83,7 @@ $result = mysqli_query($conn,$sql);
     } else {
         echo "0 Results";
     }?>
+
+
 </div>
 </html>
