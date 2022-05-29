@@ -10,10 +10,10 @@ The data currenly that is apart of this are only 1v1 tournaments that have a min
 
 
 ## Tasks
-- [] Able to add new match records
-- [] Able to add new players and link renames to thier main name EG Farms = TheWheelie
-- [] Clean Ui for all pages
-- [] Defualt is read only with secure logon for user to add in data.
+- [ ] Able to add new match records
+- [ ] Able to add new players and link renames to thier main name EG Farms = TheWheelie
+- [ ] Clean Ui for all pages
+- [ ] Defualt is read only with secure logon for user to add in data.
 ### Optional
-- [] Add in Images for maps
-- [] Link ReplayID with FAF Replays via API
+- [ ] Add in Images for maps
+- [ ] Link ReplayID with FAF Replays via API
