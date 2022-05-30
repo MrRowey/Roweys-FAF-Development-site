@@ -1,21 +1,32 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>FAF Tournament Match Data</title>
+    <title>Rowey's FAF Development site</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        body,h1 {font-family: "Raleway",sans-serif;}
+        body,html {height: 100%;}
+        .bgimg {
+            background-image: url('/images/commingsoon.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
 </head>
-<nav class="w3-bar w3-blue">
-    <a href="/index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-    <a href="/pages/1v1.php" class="w3-bar-item w3-button w3-mobile">1v1 Match Data</a>
-    <a href="/pages/AddData.php" class="w3-bar-item w3-button w3-mobile">Add Data</a>
-    <!--<a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>-->
-    <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
-</nav>
-<main w3-container>
-    <h1> FAF Tournament Match Data</h1>
-    <p> This site is to display and look up Tournament data. Currenly 1v1 Data is only mesured at anything with a min of $50 Prize pool</p>
-    <img src="/images/1.jpg" alt="FAF Image">
+<main class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        Rowey's FAF Development site
+    </div>
+    <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top">Comming Soon</h1>
+        <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <p class="w3-large w3-center">Development in Progress</p>
+    </div>
 </main>
 </html>
