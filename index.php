@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <script src="https://kit.fontawesome.com/ef83ee7b4b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
     <style>
         body,h1 {font-family: "Raleway",sans-serif;}
         body,html {height: 100%;}
@@ -27,6 +26,9 @@
         <h1 class="w3-jumbo w3-animate-top">Comming Soon</h1>
         <hr class="w3-border-grey" style="margin:auto;width:40%">
         <p class="w3-large w3-center">Development in Progress</p>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large">
+        Powerd By <i class="fa-brands fa-github"></i> Github Repository & Heroku
     </div>
 </main>
 </html>
