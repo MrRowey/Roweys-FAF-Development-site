@@ -12,3 +12,7 @@ The Data that's avalaibe from the Excel sheet consists of :
 - Replay Id
 - Year of Tournament
 - Prize Money
+
+---
+## Database Diagramme
+<a href="https://dbdiagram.io/d/62b1f6e369be0b672c12b037"><img src="https://user-images.githubusercontent.com/20344151/174856217-badff298-7856-4cde-9e0e-9600ad5b3c0f.png" align="center"></a>
