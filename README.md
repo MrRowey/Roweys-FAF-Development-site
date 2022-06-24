@@ -1,10 +1,10 @@
-I Was provied by a Player who has colleced 1v1 Data form all the tournamnerts sicne 2015 into a Excel spredsheet with a basic page to get some data out of it all.
+I was provided by a player who has collected 1v1 data from all the tournaments since 2015, into an Excel spreadsheet with a basic page to get some data out of it all.
 
-My aim is to create a database to sotes all this informaion and have it avaliable via a webfront end.
+My aim is to create a database that sorts all this information, which will be available via a webfront end.
 
-The Data that's avalaibe from the Excel sheet consists of :
+The Data that's available from the Excel sheet consists of :
 - Players Names
-- Win Condidtion
+- Win Condition
 - Finals Match
 - Faction Selection
 - Map Selection
