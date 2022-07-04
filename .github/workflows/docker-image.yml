@@ -1,0 +1,14 @@
+name: Website Docker Release
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build and push Docker images
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
