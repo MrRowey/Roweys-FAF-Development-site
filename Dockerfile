@@ -1,5 +1,5 @@
 ##Build Docekr Image
-FROM ubuntu:lts
+FROM ubuntu:20.04
 RUN sudo apt install apache2
 RUN sudo apt install php libapache2-mod-php php-mysql
 RUN git clone https://github.com/MrRowey/Roweys-FAF-Development-site.git
