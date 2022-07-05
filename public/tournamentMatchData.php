@@ -6,21 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <linl rel="stylesheet" href="../routes/nav.css">
-   <!-- <style>
-        /* Light Theme  */
-        .w3-theme-main-light {color:#fff !important; background-color:#070928 !important}
-        .w3-theme-acc1-light {background-color:#6C72CB !important}
-        .w3-theme-acc2-light {background-color:#CD69C1 !important}
-        
-
-        /* Dark Theme  */
-        .w3-theme-main-dark {color:#EEEDF0 !important; background-color:#17181f !important}
-        .w3-theme-acc1-dark {background-color:#3456FF !important}
-        .w3-theme-acc2-dark {background-color:#F8F8FA !important}
-
-    </style>
-    -->
 
 </head>
 <nav class="w3-bar w3-blue">
