@@ -25,6 +25,7 @@
     <div class="w3-display-middle">
         <h1 class="w3-jumbo w3-animate-top">Comming Soon</h1>
         <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <a href="/public/Tournament-Data-DB/TounamentLandingPage.php" type="button">HomePage</a>
         <p class="w3-large w3-center">Development in Progress</p>
     </div>
     <div class="w3-display-bottomleft w3-padding-large">
