@@ -18,9 +18,9 @@
     <h1> FAF Tournament Match Data</h1>
     <p> This site is to display and look up Tournament data. Currenly 1v1 Data is only mesured at anything with a min of $50 Prize pool</p>
 
-    <a href="" type="button">Tournament Match Data</a>
-    <a href="" type="button">Total 1v1 Match Data</a>
-    <a href="" type="button">Player Data</a> 
+    <a href="" type="w3-button w3-color-blue">Tournament Match Data</a>
+    <a href="" type="w3-button w3-color-blue">Total 1v1 Match Data</a>
+    <a href="" type="w3-button w3-color-blue">Player Data</a> 
 
 </main>
 </html>
