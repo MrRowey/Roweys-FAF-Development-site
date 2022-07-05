@@ -14,10 +14,7 @@
 </nav>
 
 <main>
-    <h1> FAF Tournament Match Data</h1>
-    <a href="" type="button">1v1 Match Data</a>
-    <a href="" type="button">Player Data</a> 
-    
+    <h1> FAF Tournament Match Data</h1>    
     <img src="/styles/images/placeholder.jpg" alt="FAF Image">
 </main>
 </html>

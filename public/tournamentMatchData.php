@@ -14,30 +14,13 @@
     <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
 </nav>
 
-<label for="theme" class="theme">
-    <span>Light</span>
-    <span class="theme__toggle-wrap">
-        <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-        <span class="theme__fill"></span>
-        <span class="theme__icon">
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-            <span class="theme__icon-part"></span>
-        </span>
-    </span>
-    <span>Dark</span>
-</label>
-
-
 <main >
     <h1> FAF Tournament Match Data</h1>
     <p> This site is to display and look up Tournament data. Currenly 1v1 Data is only mesured at anything with a min of $50 Prize pool</p>
-    <img src="/images/1.jpg" alt="FAF Image">
+
+    <a href="" type="button">Tournament Match Data</a>
+    <a href="" type="button">Total 1v1 Match Data</a>
+    <a href="" type="button">Player Data</a> 
+
 </main>
 </html>
