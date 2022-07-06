@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center text-white bg-dark">
   <main class="px-3">
     <h1>Cover your page.</h1>
     <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
@@ -43,7 +43,7 @@
   </main>
 
 
-  <footer class="mt-auto text-white-50 footer py-3 ">
+  <footer class="fixed-bottom mt-auto text-white-50 footer py-3 ">
     <div class="container">
       <span class="text-muted">Placeholder</span>
     </div>
