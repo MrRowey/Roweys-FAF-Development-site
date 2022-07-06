@@ -35,7 +35,7 @@
             </ul>
             </li>
         </ul>
-        <a class="nav-link" style="flex-direction: right" href="#">Player Data</a>
+        <a class="nav-link" style="float: right;" href="#">Player Data</a>
     </div>
   </div>
 </nav>
