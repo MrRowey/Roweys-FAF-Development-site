@@ -33,7 +33,7 @@
   </div>
 </header>
 
-<body class="d-flex h-100 text-center text-white bg-dark">
+<div class="d-flex h-100 text-center text-white bg-dark">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <main class="px-3">
     <h1>Cover your page.</h1>
@@ -43,5 +43,5 @@
     </p>
   </main>
 </div>
-</body>
+</div>
 </html>
