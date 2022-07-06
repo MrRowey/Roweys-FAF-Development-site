@@ -18,22 +18,21 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary active">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="/index.php" class="nav-link px-2 text-secondary active">Home</a></li>
+          <li><a href="/public/1v1MatchData.php" class="nav-link px-2 text-white">1v1 Data</a></li>
+          <li><a href="/public/playerMatchData.php" class="nav-link px-2 text-white">Player Data</a></li>
+          <li><a href="/public/tournamentMatchData.php" class="nav-link px-2 text-white">Tournament Data</a></li>
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
 
         <div class="text-end justi">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-outline-light me-2" href="/Login/login.php">Login</button>
           <button type="button" class="btn btn-warning">Sign-up</button>
         </div>
       </div>
     </div>
   </header>
-
 
 <main>
     <h1> FAF Tournament Match Data</h1>    
