@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rowey's FAF Development site</title>
+    <title>Rowey's FAF Things</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://kit.fontawesome.com/ef83ee7b4b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
     <style>
-        body,h1 {font-family: "Raleway",sans-serif;}
-        body,html {height: 100%;}
-        .bgimg {
-            background-image: url('/images/commingsoon.jpg');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
         }
-    </style>
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+      </style>
 </head>
-<main class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-        Rowey's FAF Development site
+<div class="cover">
+<body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">Roweys Dev Site</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a href="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+                    <a href="nav-link fw-bold py-1 px-0" href="https://github.com/MrRowey">GitHub</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="d-flex h-100 text-center text-white bg-dark">  
+            <h1>Coming Soon...</h1>
+            <p class="lead">Placeholder Page for Roweys Development Site once Parts are complete i will make it all avaliable!</p>
+        </main>
+
+        <footer class="mt-auto text-white-50">
+            <p>All code located at <a href="https://github.com/MrRowey" class="text-white">GitHub</a>, by Rowey</a>.</p>
+        </footer>
+
+
+
     </div>
-    <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">Comming Soon</h1>
-        <hr class="w3-border-grey" style="margin:auto;width:40%">
-        <p class="w3-large w3-center">Development in Progress</p>
-    </div>
-    <div class="w3-display-bottomleft w3-padding-large">
-        Powerd By <i class="fa-brands fa-github"></i> Github Repository & Heroku
-    </div>
-</main>
+</body>
 </html>
