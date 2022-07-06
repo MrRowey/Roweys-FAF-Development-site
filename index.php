@@ -18,26 +18,24 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Player Data</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Game Data
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">1v1 Matches</a></li>
-            <li><a class="dropdown-item" href="#">Tournament Stats</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="flex-direction: right" href="#">Player Data</a>
-        </li>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Player Data</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Game Data
+                </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">1v1 Matches</a></li>
+                <li><a class="dropdown-item" href="#">Tournament Stats</a></li>
+            </ul>
+            </li>
         </ul>
+        <a class="nav-link" style="flex-direction: right" href="#">Player Data</a>
     </div>
   </div>
 </nav>
