@@ -24,10 +24,12 @@
           <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
-      </div>
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+
+
+        <div class="text-end justi">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
       </div>
     </div>
   </header>
