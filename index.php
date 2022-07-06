@@ -27,8 +27,8 @@
 
 
         <div class="text-end justi">
-          <button type="button" class="btn btn-outline-light me-2" href="/Login/login.php">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <a type="button" class="btn btn-outline-light me-2" href="/Login/login.php">Login</a>
+          <a type="button" class="btn btn-warning">Sign-up</a>
         </div>
       </div>
     </div>
