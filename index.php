@@ -32,11 +32,6 @@
     </header>
 </div>
 
-<nav class="w3-bar w3-blue">
-    <a href="/index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-    <a href="/public/tournamentMatchData.php" class="w3-bar-item w3-button w3-mobile">Data Hub</a>
-    <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
-</nav>
 
 <main>
     <h1> FAF Tournament Match Data</h1>    
