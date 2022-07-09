@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100>
+<html lang="en" class="h-100">
 <head>
     <title>FAF Tournament Match Data</title>
     <meta charset="utf-8">
