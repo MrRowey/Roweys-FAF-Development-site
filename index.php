@@ -16,7 +16,7 @@
       .bgimg-1 { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
 
       /* First image (Logo. Full height) */
-      .bgimg-1 { background-image: url('/styles/images/commingsoon.jpg'); min-height: 100%; }
+      .bgimg-1 { background-image: url('../styles/images/commingsoon.jpg'); min-height: 100%; }
 
       .w3-wide {letter-spacing: 10px;}
       .w3-hover-opacity {cursor: pointer;}
