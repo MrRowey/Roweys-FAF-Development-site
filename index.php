@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html>
 <head>
     <title>Roweys FAF Development Site</title>
     <meta charset="utf-8">
