@@ -8,12 +8,32 @@
     <link rel="stylesheet" href="/styles/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+      body, html { height: 100%; color: #777; line-height: 1.8;}
+
+      /* Create a Parallax Effect */
+      .bgimg-1 { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+
+      /* First image (Logo. Full height) */
+      .bgimg-1 { background-image: url('/styles/images/commingsoon.jpg'); min-height: 100%; }
+
+      .w3-wide {letter-spacing: 10px;}
+      .w3-hover-opacity {cursor: pointer;}
+
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1600px) { 
+        .bgimg-1 {background-attachment: scroll; min-height: 400px;}}
+    </style>
+
+
+
 </head>
 <body>
+  <!-- Navbar top -->
   <div class="w3-top">
-    <div class="w3-bar" id="MainNav">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigastion Menu">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>  
       </a>
       <a href="/index.php" class="w3-bar-item w3-button">Home</a>
@@ -27,6 +47,9 @@
       <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     </div>
   </div>
+
+
+
 
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
