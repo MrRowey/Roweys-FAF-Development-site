@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 <head>
-    <title>FAF Tournament Match Data</title>
+    <title>Roweys FAF Development Site</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    <link rel="stylesheet" href="/styles/css/stylesheet.css">
+    <link rel="stylesheet" href="/styles/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
 </head>
-<header class="p-3 bg-dark text-white">
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar" id="MainNav">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigastion Menu">
+        <i class="fa fa-bars"></i>  
       </a>
+      <a href="/index.php" class="w3-bar-item w3-button">Home</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"> About</a>
+      <a href="#1v1" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"> 1v1 Tourny Data</a>
+      <a href="#1v1" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-user"></i> Login</a>
+    </div>
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/index.php" class="nav-link px-2 text-secondary active">Home</a></li>
-        <li><a href="/public/1v1MatchData.php" class="nav-link px-2 text-white">1v1 Data</a></li>
-        <li><a href="/public/playerMatchData.php" class="nav-link px-2 text-white">Player Data</a></li>
-        <li><a href="/public/tournamentMatchData.php" class="nav-link px-2 text-white">Tournament Data</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-      </ul>
-
-
-      <div class="text-end justi">
-        <a type="button" class="btn btn-outline-light me-2" href="/Login/login.php">Login</a>
-        <a type="button" class="btn btn-warning">Sign-up</a>
-      </div>
+    <div id="mobileNav" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     </div>
   </div>
-</header>
-<div class="d-flex h-100 text-center text-white bg-dark">
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <main class="px-3">
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>
-  </main>
 
-
-  <footer class="fixed-bottom mt-auto text-white-50 footer py-3 ">
-    <div class="container">
-      <span class="text-muted">Placeholder</span>
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
     </div>
-  </footer>
-</div>
-</div>
+  </div>
+
+</body>
 </html>
