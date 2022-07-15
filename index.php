@@ -13,17 +13,14 @@
     body, html { height: 100%; color: #777; line-height: 1.8;}
 
     /* Create a Parallax Effect */
-    .bgimg-1 { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
+    .bgimg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}
 
     /* First image (Logo. Full height) */
-    .bgimg-1 { background-image: url("/styles/images/commingsoon.jpg"); min-height: 100%; }
+    .bgimg { background-image: url("/styles/images/commingsoon.jpg"); min-height: 100%; }
 
     .w3-wide {letter-spacing: 10px;}
     .w3-hover-opacity {cursor: pointer;}
 
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1600px) { 
-      .bgimg-1 {background-attachment: scroll; min-height: 400px;}}
   </style>
 </head>
 <body>
@@ -45,10 +42,7 @@
     </div>
   </div>
 
-
-
-
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="bgimg w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
       <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
     </div>
