@@ -19,8 +19,8 @@
     .bgimg-1 {
       background-position: center;
       background-size: cover;
-      background-image: url('/styles/images/placeholder.jpg');
-      min-height: 75%;
+      background-image: url('/styles/images/datahub.jpg');
+      min-height: 50%;
     }
 
     .w3-bar .w3-button {
@@ -37,9 +37,9 @@
     <!-- Right-sided navbar links -->
     <div class="w3-hide-small">
       <a href="/index.html" class="w3-bar-item w3-button"> Home</a>
-      <a href="/public/about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
-      <a href="/public/dataHub.php" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
-      <a href="/public/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="/about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
+      <a href="/datahub.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
+      <a href="/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
       <a href="/login/login.php" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -64,29 +64,27 @@
 <header class="bgimg-1 w3-display-container" id="home"></header>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:90px 16px" id="about">
-  <h3 class="w3-center">About This Site</h3>
-  <p class="w3-center w3-large">Main features</p>
+<div class="w3-container" style="padding:80px 16px" id="about">
+  <h3 class="w3-center">DataHub</h3>
+  <p class="w3-center w3-large">Link pages to spesifti Tournament data</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
+    <div class="w3-third">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">PResponsive</p>
+      <p class="w3-xlarge">1v1 Data</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a class="w3-btn w3-round w3-border" type="submit" href="/public/1v1data.html">Link to 1v1 Data</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
+      <p class="w3-xlarge">Player Data</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a class="w3-btn w3-round w3-border" type="submit" href="/public/playerdata.html">Link to Player Data</a>
     </div>
-    <div class="w3-quarter">
+    <div class="w3-third">
       <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
+      <p class="w3-xlarge">Tournamet Data</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <a class="w3-btn w3-round w3-border" type="submit" href="/public/tournamentdata.html">Link to Tournament Data</a>
     </div>
   </div>
 </div>

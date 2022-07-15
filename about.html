@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Roweys FAF Dev Site</title>
+    <title>About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -19,8 +19,8 @@
     .bgimg-1 {
       background-position: center;
       background-size: cover;
-      background-image: url('/styles/images/home.jpg');
-      min-height: 100%;
+      background-image: url('/styles/images/about.jpg');
+      min-height: 55%;
     }
 
     .w3-bar .w3-button {
@@ -61,14 +61,35 @@
 </nav>
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small"> Rowey FAF Systems</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Rowey FAF Systems</span><br>
-    <span class="w3-large"> All System that are apart of this site were created by Rowey</span>
-    <p><a href="/public/about.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Find out more about this site</a></p>
-  </div> 
-</header>
+<header class="bgimg-1 w3-display-container" id="home"></header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:90px 16px" id="about">
+  <h3 class="w3-center">About This Site</h3>
+  <p class="w3-center w3-large">Main features</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">PResponsive</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Design</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -77,6 +98,7 @@
 </footer>
  
 <script>
+
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
