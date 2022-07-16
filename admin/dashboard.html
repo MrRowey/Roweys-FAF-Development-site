@@ -15,27 +15,39 @@
       line-height: 1.8;
     }
 
-    /* Full height image header */
-    .bgimg-1 {
-      background-position: center;
-      background-size: cover;
-      background-image: url('/styles/images/home.jpg');
-      min-height: 50%;
-    }
-
     .w3-bar .w3-button {
       padding: 16px;
+    }
+
+    li,ul {
+      list-style: none;
+    }
+
+    .sidebar {
+      width: 25%;
+    }
+
+    .main {
+      margin-left: 25%;
     }
     </style>
   </head>
 <body>
 
 <!--Dashboard Side Nav-->
-<div class="w3-sidebar w3-bar-block w3-card w3-white" style="width: 25%">
+<div class="w3-sidebar w3-bar-block w3-card w3-white sidebar">
   
-  <!-- Accout Info -->
+  <h5 class="w3-center">Hello, Name</h5>
   
+  <div class="w3-center">
+  <a class="w3-button" style="padding: 5%;" href="/admin/adminIndex.html"><i class="fa fa-home"></i></a>
+  <a class="w3-button" style="padding: 5%;" href=""><i class="fa fa-user"></i></a>
+  <a class="w3-button" style="padding: 5%;" href=""><i class="fa-solid fa-gear"></i></a>
+  <a class="w3-button" style="padding: 5%;" href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+  </div>
   
+  <hr>
+
 
   
 
@@ -47,35 +59,13 @@
   </div>
 
 
-  <div class="w3-container">
-    <a style="text-decoration:none;" class="w3-bar-item w3-button" href=""><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
-  </div>
+</div>
 
-
+<div class="main w3-container">
+<h2>Teigint page </h2>
 </div>
 
 
 
-
-
-
-
-<script>
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
 </body>
 </html>
