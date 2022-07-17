@@ -31,42 +31,31 @@
       margin-left: 25%;
     }
 
-    .btnIconPadding {
-      padding: 5%;
-    }
-
-    .iconAlign {
-      vertical-align: middle;
+    .gradRacoonBlack {
+      background-image: linear-gradient(#b6fbff,#83a4d4);
     }
     </style>
   </head>
-<body>
+<body class="w3-light-grey">
 
 <!--Dashboard Side Nav-->
-<div class="w3-sidebar w3-bar-block w3-card w3-white sidebar">
-  
+<div class="w3-sidebar w3-bar-block w3-card sidebar gradRacoonBlack">
   <h5 class="w3-center">Hello, Name</h5>
-  
-  <div class="w3-center">
-  <a class="w3-button btnIconPadding" href="/admin/adminDashboard.html"><i class="fa fa-home"></i></a>
-  <a class="w3-button btnIconPadding" href=""><i class="fa-solid fa-gear"></i></a>
-  <a class="w3-button btnIconPadding" href=""><i class="fa-solid fa-right-from-bracket"></i></a>
-  </div>
-  
   <hr>
-
-
   <!-- Page Links -->
   <div>
-    <a href="/admin/1v1Data.html" class="w3-center w3-bar-item w3-button"> 1v1 Data</a>
-    <a href="/admin/playerData.html" class="w3-center w3-bar-item w3-button"> Player Data</a>
-    <a href="/admin/tournamentData.html" class="w3-center w3-bar-item w3-button"> Tournamenent Data</a>
+    <a href="/admin/adminDashboard.html" class="w3-center w3-bar-item w3-button"><i class="fa fa-user-group"></i> Overview</a>
+    <a href="/admin/1v1Data.html" class="w3-center w3-bar-item w3-button"><i class="fa-solid fa-table"></i> 1v1 Data</a>
+    <a href="/admin/playerData.html" class="w3-center w3-bar-item w3-button"><i class="fa fa-users"></i> Player Data</a>
+    <a href="/admin/tournamentData.html" class="w3-center w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
+    <a href="/admin/settings.html" class="w3-center w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="/admin/settings.html" class="w3-center w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
   </div>
 
 
 </div>
 <header class="main w3-container">
-  <h1>Admin Dashboard</h1>
+  <h1>Tournament Admin Dashboard</h1>
   <!-- Overall Stats-->
   <div class="w3-container">
     <div class="w3-third">
@@ -83,7 +72,5 @@
     </div>
   </div>
 </header>
-
-
 </body>
 </html>
