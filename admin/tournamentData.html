@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tournament Data Dashboard</title>
+    <title>1v1 Data Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,12 +9,18 @@
     <script src="https://kit.fontawesome.com/502f247d2b.js" crossorigin="anonymous"></script>
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+    .content {
+      margin-left:300px;
+      margin-top: 43px;
+    }
+    
     </style>
   </head>
-<body class="w3-light-grey">
+<body>
 
 <!-- Top Container-->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4;">
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
   <Span class="w3-bar-item w3-right"> Datahub Admin</Span>
 </div>
@@ -27,7 +33,7 @@
       <img src="#" class="w3-cirlce w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span>welcome, <strong>Name</strong></span><br>
+      <span>Welcome, <strong>Name</strong></span><br>
       <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-home"></i></a>
       <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-cog"></i></a>
@@ -45,16 +51,14 @@
     <a href="/admin/tournamentData.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
     <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
     <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
-<br><br>
+  <br><br>
   </div>
 </nav>
 
 <div class="w3-overlay w3-hide-large w3-animate opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
  
-
-
-<header class="w3-main" style="margin-left:300px;margin-top: 43px ;">
-  <h1>Tournament Admin Dashboard</h1>
+<header class="w3-main content">
+  <h1 class="w3-padding">Tournamenent Data Dashboard</h1>
   <!-- Overall Stats-->
   <div class="w3-container">
     <div class="w3-third">
@@ -71,35 +75,52 @@
     </div>
   </div>
 </header>
+<hr>
+<main class="w3-main content">
+  <div class="w3-container w3-center">
+    <div class="w3-container" style="padding-bottom: 1% ;">
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-red" href="">Delete</a>
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-amber" href="">Update</a>
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-green" href="">Add</a>
+    </div>
+    <table class="w3-table w3-centered w3 w3-card-4 w3-hoverable w3-table-all">
+      <tr>
+        <th>ID</th>
+        <th>Player Name</th>
+        <th>List of Alias</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tagada</td>
+        <td>View</td>
+      </tr>
+    </table>
+  </div>
 
 
-
-
-
-
-
+</main>
 <script>
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-  // Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+  var mySidebar = document.getElementById("mySidebar");
+  
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+  
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
   }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
 </script>
 </body>
 </html>
