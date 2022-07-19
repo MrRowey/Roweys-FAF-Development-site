@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../publicDBConfig.php');
+include('../publicDBCdbconfig.php');
 
 if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please enter your Username and Password');

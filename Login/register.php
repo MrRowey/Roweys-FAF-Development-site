@@ -1,11 +1,11 @@
 <?php
-include('../publicDBConfig.php');
+include('../publicDBCdbconfig.php');
 
-if (!isset($_POST['Username'], $_POST['Password'])) {
+if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please complete the sign up form');
 }
 
-if (empty($_POST['Username']) || empty($_POST['Password'])) {
+if (empty($_POST['username']) || empty($_POST['password'])) {
     exit('Plase complete the sing up form');
 }
 
@@ -14,9 +14,9 @@ if (empty($_POST['Username']) || empty($_POST['Password'])) {
 //}
 
 // Checking if the username allready exisists
-if ($stmt = $conn->prepare('SELECT ID, Password FROM accounts WHERE Username = ?')) {
+if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     // bining the parameters (s = strin, i = int ect), has the passowrd using php password_hash function.
-    $stmt->bind_param('s', $_POST['Username']);
+    $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
     $stmt->store_result();
     // store the resole so we can check if it is allreay in the DB
@@ -25,14 +25,14 @@ if ($stmt = $conn->prepare('SELECT ID, Password FROM accounts WHERE Username = ?
         header('Location: ../signup.php');
     } else {
         // username dose not existe, insert new account
-        if ($stmt = $conn->prepare('INSERT INTO accounts (Username, Password) VALUES (?, ?)')) {
+        if ($stmt = $conn->prepare('INSERT INTO accounts (username, password) VALUES (?, ?)')) {
             // to prevent exposing passwords in the db we encripted them by hashing them
-            $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
-            $stmt->bind_param('ss', $_POST['Username'], $password);
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $stmt->bind_param('ss', $_POST['username'], $password);
             $stmt->execute();
             echo 'You have successfully registerd, you can now login';
             sleep(2);
-            header('Location: ../admin/adminDashboard.php');
+            header('Location: ../index.php');
         } else {
             // somthing worng with SQL statmenet
             echo 'Could not prepare staement!';
