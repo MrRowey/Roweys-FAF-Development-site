@@ -32,7 +32,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
             $stmt->execute();
             echo 'You have successfully registerd, you can now login';
             sleep(2);
-            header('Location: ../index.php');
+            header('Location: ../admin/adminDashboard.php');
         } else {
             // somthing worng with SQL statmenet
             echo 'Could not prepare staement!';
