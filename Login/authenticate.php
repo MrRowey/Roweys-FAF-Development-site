@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../dbconfig.php');
+include('../publicDBConfig.php');
 
 if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please enter your Username and Password');
@@ -23,7 +23,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: ../Login/home.php');
+            header('Location: ../admin/adminDashboard.php');
         } else {
             echo 'Inncorrect username or password[1]';
             // incorrect password
