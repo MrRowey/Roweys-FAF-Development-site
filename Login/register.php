@@ -1,5 +1,5 @@
 <?php
-include('../dbconfig.php');
+include('../publicDBConfig.php');
 
 if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please complete the sign up form');
