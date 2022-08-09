@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect('localhost','datahubadmin','CyAsK6__MXc[u@]K','datahubfaf-data');
+$conn = mysqli_connect('localhost','DHAdmin','K7mxxvQd9F-!F[]3','datahub');
 
 if (mysqli_connect_errno()) {
 	// If there is an error with the connection, stop the script and display the error.

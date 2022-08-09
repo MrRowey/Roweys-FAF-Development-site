@@ -34,9 +34,9 @@
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Name</strong></span><br>
-      <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-home"></i></a>
-      <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-buton"><i class="fa fa-cog"></i></a>
+      <a href="/admin/adminDashboard.php" class="w3-bar-item w3-buton"><i class="fa fa-home"></i></a>
+      <a href="/admin/settings.php" class="w3-bar-item w3-buton"><i class="fa fa-cog"></i></a>
+      <a href="/login/logout.php" class="w3-bar-item w3-buton"><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
   </div>
   <hr>
@@ -45,12 +45,12 @@
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="Close Menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>
-    <a href="/admin/adminDashboard.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-user-group"></i> Overview</a>
-    <a href="/admin/1v1Data.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-table"></i> 1v1 Data</a>
-    <a href="/admin/playerData.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-users"></i> Player Data</a>
-    <a href="/admin/tournamentData.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
-    <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
-    <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+    <a href="/admin/adminDashboard.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-user-group"></i> Overview</a>
+    <a href="/admin/1v1Data.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-table"></i> 1v1 Data</a>
+    <a href="/admin/playerData.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-users"></i> Player Data</a>
+    <a href="/admin/tournamentData.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
+    <a href="/admin/settings.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="/login/logout.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
   <br><br>
   </div>
 </nav>

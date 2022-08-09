@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Datahub Overview Dashboard</title>
+    <title>1v1 Data Dashboard</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -34,8 +34,8 @@
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Name</strong></span><br>
-      <a href="/admin/adminDashboard.html" class="w3-bar-item w3-buton"><i class="fa fa-home"></i></a>
-      <a href="/admin/settings.html" class="w3-bar-item w3-buton"><i class="fa fa-cog"></i></a>
+      <a href="/admin/adminDashboard.php" class="w3-bar-item w3-buton"><i class="fa fa-home"></i></a>
+      <a href="/admin/settings.php" class="w3-bar-item w3-buton"><i class="fa fa-cog"></i></a>
       <a href="/login/logout.php" class="w3-bar-item w3-buton"><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
   </div>
@@ -45,12 +45,12 @@
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="Close Menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>
-    <a href="/admin/adminDashboard.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-user-group"></i> Overview</a>
-    <a href="/admin/1v1Data.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-table"></i> 1v1 Data</a>
-    <a href="/admin/playerData.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-users"></i> Player Data</a>
-    <a href="/admin/tournamentData.html" class="w3-padding w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
-    <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
-    <a href="/admin/settings.html" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+    <a href="/admin/adminDashboard.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-user-group"></i> Overview</a>
+    <a href="/admin/1v1Data.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-table"></i> 1v1 Data</a>
+    <a href="/admin/playerData.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-users"></i> Player Data</a>
+    <a href="/admin/tournamentData.php" class="w3-padding w3-bar-item w3-button"><i class="fa fa-diamond"></i> Tournamenent Data</a>
+    <a href="/admin/settings.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="/login/logout.php" class="w3-padding w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
   <br><br>
   </div>
 </nav>
@@ -58,7 +58,7 @@
 <div class="w3-overlay w3-hide-large w3-animate opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
  
 <header class="w3-main content">
-  <h1 class="w3-padding">Datahub Overview Dashboard</h1>
+  <h1 class="w3-padding">Player Data Dashboard</h1>
   <!-- Overall Stats-->
   <div class="w3-container">
     <div class="w3-third">
@@ -77,7 +77,25 @@
 </header>
 <hr>
 <main class="w3-main content">
-  
+  <div class="w3-container w3-center">
+    <div class="w3-container" style="padding-bottom: 1% ;">
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-red" href="">Delete</a>
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-amber" href="">Update</a>
+      <a class="w3-button w3-right w3-large w3-border w3-round-medium w3-card-4 w3-hover-green" href="">Add</a>
+    </div>
+    <table class="w3-table w3-centered w3 w3-card-4 w3-hoverable w3-table-all">
+      <tr>
+        <th>ID</th>
+        <th>Player Name</th>
+        <th>List of Alias</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tagada</td>
+        <td>View</td>
+      </tr>
+    </table>
+  </div>
 
 
 </main>

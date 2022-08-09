@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect('localhost','datahubpublic','R6wjja@*qEE@v72f','datahub');
+$conn = mysqli_connect('localhost','DHPub','pdRG.iBx@aUXt!AF','datahub');
 
 if (mysqli_connect_errno()) {
 	// If there is an error with the connection, stop the script and display the error.

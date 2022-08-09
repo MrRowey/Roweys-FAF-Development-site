@@ -36,11 +36,11 @@
       <a href="/index.html" class="w3-bar-item w3-button w3-wide">Rowey Dev</a>
       <!-- Right-sided navbar links -->
       <div class="w3-hide-small">
-        <a href="/index.html" class="w3-bar-item w3-button"> Home</a>
-        <a href="/about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
-        <a href="/datahub.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
-        <a href="/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
-        <a href="/login.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
+        <a href="/index.php" class="w3-bar-item w3-button"> Home</a>
+        <a href="/about.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
+        <a href="/datahub.php" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
+        <a href="/contact.php" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+        <a href="/login.php" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
   
@@ -53,17 +53,17 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-dark-gray w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-    <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-    <a href="/datahub.html" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
-    <a href="/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
-    <a href="/login.html" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+    <a href="/index.pug" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="/about.pug" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="/datahub.pug" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
+    <a href="/contact.pug" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+    <a href="/login.pug" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
 </nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container" id="home">
     <div>
-      <form class="w3-container w3-display-middle w3-card-4 w3-light-grey w3-margin w3-round-large" action="/login/register.php" method="get" autocomplete="off">
+      <form class="w3-container w3-display-middle w3-card-4 w3-light-grey w3-margin w3-round-large" action="/login/register.php" method="post" autocomplete="off">
         <h2 class="w3-center">SignUp</h2>
         <!-- Username-->
         <div class="w3-row w3-section">
