@@ -29,7 +29,6 @@
     </style>
   </head>
 <body>
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -60,17 +59,44 @@
   <a href="/login.php" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
 </nav>
 
+<?php
+  require('dbconfig.php');
+  session_start();
+
+  if (isset($_POST['username'])) {
+    $username = stripcslashes($_REQUEST['username']);
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = stripslashes($_REQUEST['password']);
+    $password = mysqli_real_escape_string($conn, $password);
+
+    // checking that the user is in the database
+    $query = "SELECT * from `users` WHERE username='$username' AND password='" . md5($password) . "'";
+    $result = mysqli_query($conn, $query);
+    $rows = mysqli_num_rows($result);
+    if($rows == 1) {
+      $_SESSION['username'] = $username;
+      // redirect to dashboard page
+      header("Location: ../admin/adminDashboard.php");
+    } else {
+      echo "<p> Incorret Username or Password </p>";
+    }
+  } else
+?>
+
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container" id="home">
   <div>
-    <form class="w3-container w3-display-middle w3-card-4 w3-light-grey w3-margin w3-round-large" action="/login/authenticate.php" method="get">
+    <?php
+    {
+    ?>
+    <form class="w3-container w3-display-middle w3-card-4 w3-light-grey w3-margin w3-round-large" method="post">
       <h2 class="w3-center">Login</h2>
 
       <!-- Username-->
       <div class="w3-row w3-section">
           <div class="w3-col" style="width: 50px;"><i class="w3-xxlarge fa fa-user"></i></div>
               <div class="w3-rest">
-                  <input class="w3-input" type="text" name="username" placeholder="Username">
+                  <input class="w3-input" type="text" name="username" placeholder="Username" autofocus="true">
               </div>
       </div>
 
@@ -78,32 +104,33 @@
       <div class="w3-row w3-section">
           <div class="w3-col" style="width: 50px;"><i class="w3-xxlarge fa fa-lock"></i></div>
               <div class="w3-rest">
-                  <input class="w3-input" type="password" name="username" placeholder="Password">
+                  <input class="w3-input" type="password" name="password" placeholder="Password">
               </div>
       </div>
 
-      <button class="w3-button w3-block w3-section w3-border w3-round w3-ripple w3-padding" type="submit">Login</button>
+      <button class="w3-button w3-block w3-section w3-border w3-round w3-ripple w3-padding" type="submit" name="submit">Login</button>
     </form>
+    <?php
+    }
+    ?>
   </div>
 </header>
-
 <script>
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
 </script>
-
 </body>
 </html>
