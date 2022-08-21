@@ -25,3 +25,8 @@ I would like to jsut also say a Huge Props to Hemfast for collating all the data
 ### Beta 1.1.0
 - Add Charts from the chart.js Libary to make the data more redable
 - Add ManagerDashboard for adding new Data
+
+
+## Database Desgin
+Here is the Update version of the database desgin
+![image](https://user-images.githubusercontent.com/20344151/185808407-ec2b050b-99c8-41f0-8d2a-1e05e9967b34.png)
