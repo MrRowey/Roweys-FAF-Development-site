@@ -1,5 +1,5 @@
 <?php
-include('../adminDBConfig.php');
+include('../dbconfig.php');
 
 
 ## Dropdown Select Statments
@@ -7,12 +7,12 @@ include('../adminDBConfig.php');
 ## Need to Get Player Name from Both Alias & User but also know who Alis - Whom
 
 ## Get User's & Alias Names
-//$playersSQL = 'SELECT ID,Username FROM user';
-//$playersResult = mysqli_query($conn, $userSQL);
+$playersSQL = 'SELECT ID,Username FROM user';
+$playersResult = mysqli_query($conn, $userSQL);
 
 ## Get Alias
-//$aliasSQL = 'SELECT A.ID, A.Alias, U.Username FROM user AS U, alias_to_user AS A where A.UsernameID = U.ID;';
-//$aliasResult = mysqli_query($conn, $aliasSQL);
+$aliasSQL = 'SELECT A.ID, A.Alias, U.Username FROM user AS U, alias_to_user AS A where A.UsernameID = U.ID;';
+$aliasResult = mysqli_query($conn, $aliasSQL);
 
 
 # Player
@@ -20,20 +20,20 @@ include('../adminDBConfig.php');
 # Opponent
 
 # Win Conditions
-//$winSQL = 'SELECT ID,Conditions FROM win_conditions';
-//$winResult = mysqli_query($conn,$winSQL);
+$winSQL = 'SELECT ID,Conditions FROM win_conditions';
+$winResult = mysqli_query($conn,$winSQL);
 # Player Faction
-//$pFactionSQL = 'SELECT ID,Name FROM faction';
-//$pFactionResult = mysqli_query($conn,$pFactionSQL);
+$pFactionSQL = 'SELECT ID,Name FROM faction';
+$pFactionResult = mysqli_query($conn,$pFactionSQL);
 # Opponent Facion
-//$oFactionSQL = 'SELECT ID,Name FROM faction';
-//$oFactionResult = mysqli_query($conn,$oFactionSQL);
+$oFactionSQL = 'SELECT ID,Name FROM faction';
+$oFactionResult = mysqli_query($conn,$oFactionSQL);
 # Map
-//$mapSQL = 'SELECT ID,Name FROM Maps';
-//$mapResult = mysqli_query($conn, $mapSQL);
+$mapSQL = 'SELECT ID,Name FROM Maps';
+$mapResult = mysqli_query($conn, $mapSQL);
 # Tournament
-//$tournySQL = 'SELECT ID,Name FROM tournament';
-//$tournyResult = mysqli_query($conn,$tournySQL);
+$tournySQL = 'SELECT ID,Name FROM tournament';
+$tournyResult = mysqli_query($conn,$tournySQL);
 
 
 
@@ -60,7 +60,7 @@ include('../adminDBConfig.php');
                 <label class="w3-text-blue" for="tourny">Select Match Tournament</label>
                 <select class="w3-select w3-border " name="tourny" id="tourny">
                 <option value="" disabled selected>Please Select a Tournament</option>
-                <?php while ($row = mysqli_fetch_array(null)) {
+                <?php while ($row = mysqli_fetch_array($tournyResult)) {
                     echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
                 }?>
                 </select>
@@ -75,7 +75,7 @@ include('../adminDBConfig.php');
                 <label class="w3-text-blue" for="win">Match Win Condition</label>
                 <select class="w3-select w3-border" name="win" id="win">
                 <option value="" disabled selected>Please Select a Win Result</option>    
-                <?php while($row = mysqli_fetch_array(null)) {
+                <?php while($row = mysqli_fetch_array($winResult)) {
                     echo '<option value="' . $row['ID'] . '">' . $row['Conditions'] . '</option>';
                 }?>
                 </select>
@@ -86,7 +86,7 @@ include('../adminDBConfig.php');
             <label for=""></label>
                 <select class="w3-select w3-border" name="" id="">
                 <option value="" disabled selected>Select Player</option>                  
-                    <?php while($row = mysqli_fetch_array(null)) {
+                    <?php while($row = mysqli_fetch_array($aliasResult)) {
                         echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
                     }?>
 
@@ -104,7 +104,7 @@ include('../adminDBConfig.php');
                 <label for="pFaction">Player Faction</label>
                 <select class="w3-select w3-border" name="pFaction" id="pFaction">
                     <option value="" disabled selected>Slect Player Faction</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
+                    <?php while($row = mysqli_fetch_array($pFactionResult)) {
                         echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
                     }?>
                 </select>
@@ -114,7 +114,7 @@ include('../adminDBConfig.php');
                 <label for="oFaction">Opponet Faction</label>
                 <select class="w3-select w3-border" name="oFaction" id="oFaction">
                     <option value="" disabled selected>Select Opponent Faction</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
+                    <?php while($row = mysqli_fetch_array($oFactionResult)) {
                         echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
                     }?>
                 </select>
@@ -126,7 +126,7 @@ include('../adminDBConfig.php');
                 <label for="map">Map Played On</label>
                 <select class="w3-select w3-border" name="map" id="map">
                     <option value="" disabled selected>Select Map</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
+                    <?php while($row = mysqli_fetch_array($mapResult)) {
                         echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
                     }?>
                 </select>
