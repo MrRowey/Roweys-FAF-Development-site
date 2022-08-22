@@ -1,111 +1,188 @@
 <?php
-include('../adminDBConfig.php');
+$conn = mysqli_connect('localhost','datahubAdmin','eOv5dzTSf!]bZ[1L','datahub');
+
+if (mysqli_connect_errno()) {
+    // If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+# Getting Default Tables
+
+## Get Players Usernames
+$PlayersSQL = 'SELECT p.username as player, o.username as opponent FROM players as p JOIN players as o ON p.username = o.username';
+$PlayersResult = mysqli_query($conn, $PlayersSQL);
+
+### Player Username
+
+### Opponent Username
+
+## Get Factions
+$FactionSQL = 'SELECT * FROM faction';
+$FactionResult = mysqli_query($conn, $FactionSQL);
+
+## Get Maps
+$MapsSQL = 'SELECT * FROM maps';
+$MapsResult = mysqli_query($conn, $MapsSQL);
+
+## Get Tournaments
+$TourneySQL = 'SELECT * FROM tournaments';
+$TourneyResult = mysqli_query($conn, $TourneySQL);
+
+## Win Conditions
+$WinConditionSQL = 'SELECT * FROM match_result';
+$WinConditionResult = mysqli_query($conn, $WinConditionSQL);
 
 
-## Dropdown Select Statments
+# Drop Down Selection Menus
 
-## Need to Get Player Name from Both Alias & User but also know who Alis - Whom
+## Player
+$Player = $PlayersResult;
 
-## Get User's & Alias Names
-//$playersSQL = 'SELECT ID,Username FROM user';
-//$playersResult = mysqli_query($conn, $userSQL);
+## Opponent
+$Opponent = $PlayersResult;
 
-## Get Alias
-//$aliasSQL = 'SELECT A.ID, A.Alias, U.Username FROM user AS U, alias_to_user AS A where A.UsernameID = U.ID;';
-//$aliasResult = mysqli_query($conn, $aliasSQL);
+## Win Conditions
+$Win = $WinConditionResult;
 
+## Player Faction
+$PlayerFaction = $FactionResult;
 
-# Player
+## Opponent Faction
+$OpponentFaction = $FactionResult;
 
-# Opponent
+## Map
+$Map = $MapsResult;
 
-# Win Conditions
-//$winSQL = 'SELECT ID,Conditions FROM win_conditions';
-//$winResult = mysqli_query($conn,$winSQL);
-# Player Faction
-//$pFactionSQL = 'SELECT ID,Name FROM faction';
-//$pFactionResult = mysqli_query($conn,$pFactionSQL);
-# Opponent Facion
-//$oFactionSQL = 'SELECT ID,Name FROM faction';
-//$oFactionResult = mysqli_query($conn,$oFactionSQL);
-# Map
-//$mapSQL = 'SELECT ID,Name FROM Maps';
-//$mapResult = mysqli_query($conn, $mapSQL);
 # Tournament
-//$tournySQL = 'SELECT ID,Name FROM tournament';
-//$tournyResult = mysqli_query($conn,$tournySQL);
+$Tourney = $TourneyResult;
 
 
 
 ?>
 <html>
-<title>FAF Tournament Match Data</title>
-    <meta charset="utf-8">
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://kit.fontawesome.com/502f247d2b.js" crossorigin="anonymous"></script>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url('/styles/images/datahub.jpg');
+            min-height: 20%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+    </style>
 </head>
-<nav class="w3-bar w3-blue">
-    <a href="/index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-    <a href="/pages/1v1.php" class="w3-bar-item w3-button w3-mobile">1v1 Match Data</a>
-    <a href="/pages/AddData.php" class="w3-bar-item w3-button w3-mobile">Add Data</a>
-    <!--<a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>-->
-    <a href="/login.php" class="w3-bar-item w3-button w3-mobile" style="float: right;" >Login</a>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="/index.html" class="w3-bar-item w3-button w3-wide">Rowey Dev</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-hide-small">
+            <a href="/index.html" class="w3-bar-item w3-button"> Home</a>
+            <a href="/about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
+            <a href="/datahub.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
+            <a href="/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+            <a href="/login.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-dark-gray w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="/datahub.html" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
+    <a href="/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+    <a href="/login.html" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
 </nav>
-<main class="w3-container">    
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home"></header>
+
+
+
+
+<main class="w3-container">
     <form class="w3-container" action="/data/matchData.php" method="POST" style="width:100%;">
         <div class="w3-row-padding">
+            <!-- Tournament -->
             <div class="w3-third">
-                <!-- Tournament -->
-                <label class="w3-text-blue" for="tourny">Select Match Tournament</label>
-                <select class="w3-select w3-border " name="tourny" id="tourny">
-                <option value="" disabled selected>Please Select a Tournament</option>
-                <?php while ($row = mysqli_fetch_array(null)) {
-                    echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+                <label class="w3-text-blue" for="tourney">Select Match Tournament</label>
+                <select class="w3-select w3-border " name="tourney" id="tourney">
+                <option value="" style="color: black" disabled selected>Please Select a Tournament</option>
+                <?php while ($row = mysqli_fetch_array($Tourney)) {
+                    echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
                 }?>
                 </select>
             </div>
+            <!-- ReplayID -->
             <div class="w3-third">
-                <!-- ReplayID -->
                 <label class="w3-text-blue" for="replay">Replay ID:</label>
                 <input class="w3-input w3-border" name="replay" id="replay" type="number">
             </div>
+            <!-- Win Condition -->
             <div class="w3-third">
-                <!-- Win Condition -->
-                <label class="w3-text-blue" for="win">Match Win Condition</label>
-                <select class="w3-select w3-border" name="win" id="win">
-                <option value="" disabled selected>Please Select a Win Result</option>    
-                <?php while($row = mysqli_fetch_array(null)) {
-                    echo '<option value="' . $row['ID'] . '">' . $row['Conditions'] . '</option>';
+                <label class="w3-text-blue" for="Win">Match Win Condition</label>
+                <select class="w3-select w3-border" name="Win" id="Win">
+                <option value="" style="color: black" disabled selected>Please Select a Win Result</option>
+                <?php while($row = mysqli_fetch_array($Win)) {
+                    echo '<option value="' . $row['ID'] . '">' . $row['result'] . '</option>';
                 }?>
                 </select>
             </div>
         </div><br>
         <div class="w3-row-padding">
             <!-- Player -->
-            <label for=""></label>
-                <select class="w3-select w3-border" name="" id="">
-                <option value="" disabled selected>Select Player</option>                  
-                    <?php while($row = mysqli_fetch_array(null)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+            <div class="w3-half">
+                <label for="Player">Player</label>
+                <select class="w3-select w3-border" name="Player" id="Player">
+                    <option value="" style="color: black" disabled selected>Select Player</option>
+                    <?php while($row = mysqli_fetch_array($Player)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['player'] . '</option>';
                     }?>
-
-
-
                 </select>
-
-            <!-- Opponet -->
-            <!--<label for=""></label>-->
-            <!--<select class="w3-select w3-border" name="" id=""></select>-->
-            <!-- Player Faction -->
+            </div>
+            <!-- Opponent -->
+            <div class="w3-half">
+                <label for="Opponent">Opponent
+                </label>
+                <select class="w3-select w3-border" name="Opponent" id="Opponent">
+                    <option value="" style="color: black" disabled selected>Select Opponent</option>
+                    <?php while($row = mysqli_fetch_array($Opponent)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['opponent'] . '</option>';
+                    }?>
+                </select>
+            </div>
         </div><br>
         <div class="w3-row-padding">         
             <div class="w3-half">
                 <label for="pFaction">Player Faction</label>
                 <select class="w3-select w3-border" name="pFaction" id="pFaction">
-                    <option value="" disabled selected>Slect Player Faction</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+                    <option value="" disabled selected>Select Player Faction</option>
+                    <?php while($row = mysqli_fetch_array($PlayerFaction)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
                     }?>
                 </select>
             </div>
@@ -114,8 +191,8 @@ include('../adminDBConfig.php');
                 <label for="oFaction">Opponet Faction</label>
                 <select class="w3-select w3-border" name="oFaction" id="oFaction">
                     <option value="" disabled selected>Select Opponent Faction</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+                    <?php while($row = mysqli_fetch_array($OpponentFaction)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
                     }?>
                 </select>
             </div>
@@ -126,8 +203,8 @@ include('../adminDBConfig.php');
                 <label for="map">Map Played On</label>
                 <select class="w3-select w3-border" name="map" id="map">
                     <option value="" disabled selected>Select Map</option>
-                    <?php while($row = mysqli_fetch_array(null)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['Name'] . '</option>';
+                    <?php while($row = mysqli_fetch_array($Map)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
                     }?>
                 </select>
             </div>
