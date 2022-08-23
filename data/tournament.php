@@ -1,5 +1,11 @@
 <?php
-include('../dbconfig.php');
+// Connecting to the Database
+$conn = mysqli_connect('localhost','datahubPub','*MQ8[RdqAaD2V9XK','datahub');
+
+if (mysqli_connect_errno()) {
+// If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(empty($_POST['tournament'])) {
@@ -7,11 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
         // Add Duplication Check
-
         $tournament = mysqli_real_escape_string($conn,$_REQUEST['tournament']);
         $year = mysqli_real_escape_string($conn,$_REQUEST['year']);
-
-        $sql = "INSERT INTO tournament (Name,Year) VALUES ('$tournament',$year)";
+        $sql = "INSERT INTO tournaments (Name) VALUES ('$tournament')";
         if(mysqli_query($conn, $sql)){
         echo "Record Added";
         //header("location: ../index.php");
@@ -20,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-$sql = 'SELECT * FROM tournament';
+$sql = 'SELECT * FROM tournaments';
 $result = mysqli_query($conn,$sql);
 
 ?>
@@ -52,15 +56,13 @@ $result = mysqli_query($conn,$sql);
     if($result->num_rows > 0) {
         echo "<table class='w3-table'>";
         echo "<tr class='w3-blue'>";
-        echo "<th>User ID</th>";
+        echo "<th>ID</th>";
         echo "<th>Tournament Name</th>";
-        echo "<th>Year of Tournament</th>";
         echo "</tr>";
         while($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>" . $row['ID'] . "</td>";
             echo "<td>" . $row['Name'] . "</td>";
-            echo "<td>" . $row['Year'] . "</td>";
             echo "</tr>";
         }
         echo "</table>";

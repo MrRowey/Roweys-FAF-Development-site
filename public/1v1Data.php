@@ -1,21 +1,19 @@
+<?php
+// Connecting to the Database
+$conn = mysqli_connect('localhost','datahubPub','*MQ8[RdqAaD2V9XK','datahub');
+
+if (mysqli_connect_errno()) {
+    // If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html>
-  <!-- 
-    <?php
-include 'config.php';
-
-$sql = "SELECT * from players";
-$result = $link->query($sql);
-?>
-  -->
-
-
-
-
-
-
   <head>
-    <title>Player Data</Datag></title>
+    <title>About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -47,14 +45,14 @@ $result = $link->query($sql);
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="/index.html" class="w3-bar-item w3-button w3-wide">Rowey Dev</a>
+    <a href="/index.php" class="w3-bar-item w3-button w3-wide">Rowey Dev</a>
     <!-- Right-sided navbar links -->
     <div class="w3-hide-small">
-      <a href="/index.html" class="w3-bar-item w3-button"> Home</a>
-      <a href="/about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
-      <a href="/datahub.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
-      <a href="/contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
-      <a href="/login.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
+      <a href="/index.php" class="w3-bar-item w3-button"> Home</a>
+      <a href="/about.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About</a>
+      <a href="/datahub.php" class="w3-bar-item w3-button"><i class="fa fa-th"></i> DataHub</a>
+      <a href="/contact.php" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+      <a href="/login.php" class="w3-bar-item w3-button w3-right"><i class="fa fa-sign-in"> </i> Login</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -67,12 +65,12 @@ $result = $link->query($sql);
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-dark-gray w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="/index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-    <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-    <a href="/datahub.html" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
-    <a href="/contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
-    <a href="/login.html" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
-  </nav>
+    <a href="/index.php" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="/about.php" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="/datahub.php" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
+    <a href="/contact.php" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+    <a href="/login.php" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+</nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container" id="home"></header>
@@ -159,26 +157,6 @@ $result = $link->query($sql);
             <td>2022</td>
         </tr>    
     </table>
-
-    <!-- 
-      <?php
-    if ($result->num_rows > 0) {
-        echo '<table border="1">';
-        echo '<tr>';
-        echo '<th>Player ID</th>';
-        echo '<th>Player Name</th>';
-        echo '<th>Update</th>';
-        echo '</tr>';
-        while($row = $result->fetch_assoc()) {
-            echo '<tr>';
-            echo '<td>'. $row['id'] . '</td>';
-            echo '<td>'. $row['name'] . '</td>';
-            echo '</tr>';    
-        }
-        echo '</table>';
-      }
-    ?>
-     -->
 
 
   </div>

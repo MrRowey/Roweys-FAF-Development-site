@@ -16,11 +16,11 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 <nav class="w3-bar w3-blue">
-    <a href="/Login/home.php" class="w3-bar-item w3-button w3-mobile">Home</a>
+    <a href="/login/home.php" class="w3-bar-item w3-button w3-mobile">Home</a>
     <a href="/pages/1v1.php" class="w3-bar-item w3-button w3-mobile">1v1 Match Data</a>
     <!--<a href="#" class="w3-bar-item w3-button w3-mobile">Link 2</a>-->
-    <a href="../Login/logout.php" class="w3-bar-item w3-button w3-mobile" style="float: right;"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    <a href="../Login/profile.php" class="w3-bar-item w3-button w3-mobile" style="float: right;"><i class="fas fa-user-circle"></i> Profile</a>
+    <a href="/logout.php" class="w3-bar-item w3-button w3-mobile" style="float: right;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <a href="/profile.php" class="w3-bar-item w3-button w3-mobile" style="float: right;"><i class="fas fa-user-circle"></i> Profile</a>
 </nav>
 
 <main w3-container>

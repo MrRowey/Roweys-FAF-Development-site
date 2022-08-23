@@ -1,6 +1,11 @@
 <?php
 session_start();
-include('../publicDBCdbconfig.php');
+$conn = mysqli_connect('localhost','datahubAdmin','eOv5dzTSf!]bZ[1L','datahub');
+
+if (mysqli_connect_errno()) {
+    // If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
 
 if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please enter your Username and Password');
@@ -14,25 +19,23 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $password);
         $stmt->fetch();
-        // account exsists and verify the password
-        // remeber to use password_hash in registreaion file to store the hased passowrds
+        // account exists and verify the password
+        // remember to use password_hash in registration file to store the hashed passwords
         if (password_verify($_POST['password'], $password)) {
-            // verificaion succsefull
-            // create sessiosn to know the user is loggeding acting like a cookie
+            // verification successful
+            // create session to know the user is logging acting like a cookie
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             header('Location: ../admin/adminDashboard.php');
         } else {
-            echo 'Inncorrect username or password[1]';
+            echo 'Incorrect username or password[1]';
             // incorrect password
         }
     } else {
-        echo ' inncorrect username or passowrd[2]!';
+        echo ' incorrect username or password[2]!';
         // incorrect username
     }
-
     $stmt->close();
 }
-?>

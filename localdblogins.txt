@@ -1,0 +1,3 @@
+Local Database Logins
+Public : datahubPub  / *MQ8[RdqAaD2V9XK
+Admin : datahubAdmin / eOv5dzTSf!]bZ[1L

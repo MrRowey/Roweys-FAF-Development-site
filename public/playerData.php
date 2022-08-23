@@ -1,7 +1,21 @@
+<?php
+// Connecting to the Database
+$conn = mysqli_connect('localhost','datahubPub','*MQ8[RdqAaD2V9XK','datahub');
+
+if (mysqli_connect_errno()) {
+    // If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>About</title>
+    <title>Player Data</Datag></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -145,6 +159,26 @@
             <td>2022</td>
         </tr>    
     </table>
+
+    <!-- 
+      <?php
+    if ($result->num_rows > 0) {
+        echo '<table border="1">';
+        echo '<tr>';
+        echo '<th>Player ID</th>';
+        echo '<th>Player Name</th>';
+        echo '<th>Update</th>';
+        echo '</tr>';
+        while($row = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td>'. $row['id'] . '</td>';
+            echo '<td>'. $row['name'] . '</td>';
+            echo '</tr>';    
+        }
+        echo '</table>';
+      }
+    ?>
+     -->
 
 
   </div>

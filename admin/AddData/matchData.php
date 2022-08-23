@@ -6,18 +6,14 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
+##### Selecting Data ######
 # Getting Default Tables
-
 ## Get Players Usernames
-$PlayersSQL = 'SELECT p.username as player, o.username as opponent FROM players as p JOIN players as o ON p.username = o.username';
+$PlayersSQL = 'SELECT p.username as player, p.username as opponent FROM players as p';
 $PlayersResult = mysqli_query($conn, $PlayersSQL);
 
-### Player Username
-
-### Opponent Username
-
 ## Get Factions
-$FactionSQL = 'SELECT * FROM faction';
+$FactionSQL = 'SELECT f.name as player, f.name as opponent FROM faction as f';
 $FactionResult = mysqli_query($conn, $FactionSQL);
 
 ## Get Maps
@@ -29,25 +25,20 @@ $TourneySQL = 'SELECT * FROM tournaments';
 $TourneyResult = mysqli_query($conn, $TourneySQL);
 
 ## Win Conditions
-$WinConditionSQL = 'SELECT * FROM match_result';
+$WinConditionSQL = 'SELECT m.result as player, m.result as opponent FROM match_result as m';
 $WinConditionResult = mysqli_query($conn, $WinConditionSQL);
 
-
 # Drop Down Selection Menus
-
-## Player
+## Player & Opponent Name
 $Player = $PlayersResult;
-
-## Opponent
 $Opponent = $PlayersResult;
 
 ## Win Conditions
-$Win = $WinConditionResult;
+$PlayerWin = $WinConditionResult;
+$OpponentWin = $WinConditionResult;
 
-## Player Faction
+## Factions
 $PlayerFaction = $FactionResult;
-
-## Opponent Faction
 $OpponentFaction = $FactionResult;
 
 ## Map
@@ -137,20 +128,20 @@ $Tourney = $TourneyResult;
                 }?>
                 </select>
             </div>
+            <!-- Map -->
+            <div class="w3-third">
+                <label for="map">Map Played On</label>
+                <select class="w3-select w3-border" name="map" id="map">
+                <option value="" disabled selected>Select Map</option>
+                    <?php while($row = mysqli_fetch_array($Map)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
+                    }?>
+                </select>
+            </div>
             <!-- ReplayID -->
             <div class="w3-third">
                 <label class="w3-text-blue" for="replay">Replay ID:</label>
                 <input class="w3-input w3-border" name="replay" id="replay" type="number">
-            </div>
-            <!-- Win Condition -->
-            <div class="w3-third">
-                <label class="w3-text-blue" for="Win">Match Win Condition</label>
-                <select class="w3-select w3-border" name="Win" id="Win">
-                <option value="" style="color: black" disabled selected>Please Select a Win Result</option>
-                <?php while($row = mysqli_fetch_array($Win)) {
-                    echo '<option value="' . $row['ID'] . '">' . $row['result'] . '</option>';
-                }?>
-                </select>
             </div>
         </div><br>
         <div class="w3-row-padding">
@@ -170,53 +161,72 @@ $Tourney = $TourneyResult;
                 </label>
                 <select class="w3-select w3-border" name="Opponent" id="Opponent">
                     <option value="" style="color: black" disabled selected>Select Opponent</option>
-                    <?php while($row = mysqli_fetch_array($Opponent)) {
+                    <?php
+                        mysqli_data_seek($Opponent,0);
+                        while($row = mysqli_fetch_array($Opponent)) {
                         echo '<option value="' . $row['ID'] . '">' . $row['opponent'] . '</option>';
                     }?>
                 </select>
             </div>
         </div><br>
-        <div class="w3-row-padding">         
+        <div class="w3-row-padding">
+            <!-- Player Faction -->
             <div class="w3-half">
                 <label for="pFaction">Player Faction</label>
                 <select class="w3-select w3-border" name="pFaction" id="pFaction">
                     <option value="" disabled selected>Select Player Faction</option>
                     <?php while($row = mysqli_fetch_array($PlayerFaction)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
+                        echo '<option value="' . $row['ID'] . '">' . $row['player'] . '</option>';
                     }?>
                 </select>
             </div>
+            <!-- Opponent Faction -->
             <div class="w3-half">
-                <!-- Opponent Faction -->
-                <label for="oFaction">Opponet Faction</label>
+                <label for="oFaction">Opponent Faction</label>
                 <select class="w3-select w3-border" name="oFaction" id="oFaction">
                     <option value="" disabled selected>Select Opponent Faction</option>
-                    <?php while($row = mysqli_fetch_array($OpponentFaction)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
+                    <?php
+                        mysqli_data_seek($OpponentFaction,0);
+                        while($row = mysqli_fetch_array($OpponentFaction)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['opponent'] . '</option>';
                     }?>
                 </select>
             </div>
         </div><br>
         <div class="w3-row-padding">
-            <div class="w3-third">
-                <!-- Map -->
-                <label for="map">Map Played On</label>
-                <select class="w3-select w3-border" name="map" id="map">
-                    <option value="" disabled selected>Select Map</option>
-                    <?php while($row = mysqli_fetch_array($Map)) {
-                        echo '<option value="' . $row['ID'] . '">' . $row['name'] . '</option>';
+            <!-- Player Match Result -->
+            <div class="w3-half">
+                <label for="pWin">Player Match Result</label>
+                <select class="w3-select w3-border" name="pWin" id="pWin">
+                    <option value="" style="color: black" disabled selected>Select Player Win Condition</option>
+                    <?php while($row = mysqli_fetch_array($PlayerWin)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['player'] . '</option>';
                     }?>
                 </select>
             </div>
+            <!-- Opponent Match Result -->
+            <div class="w3-half">
+                <label for="oWin">Opponent Match Result</label>
+                <select class="w3-select w3-border" name="oWin" id="oWin">
+                    <option value="" style="color: black" disabled selected>Select Opponent Win Condition</option>
+                    <?php
+                    mysqli_data_seek($OpponentWin,0);
+                    while($row = mysqli_fetch_array($OpponentWin)) {
+                        echo '<option value="' . $row['ID'] . '">' . $row['opponent'] . '</option>';
+                    }?>
+                </select>
+            </div>
+        </div><br>
+        <div class="w3-row-padding">
+            <!-- In Finals -->
             <div class="w3-third">
-                <!-- Finals -->
                 <label for="final">In the Finals? (Yes or No):</label>
                 <input class="w3-input w3-border" name="final" id="final" type="text">
             </div>
-            <div class="w3-third">
             <!-- Winnings ($) -->
-            <label for="prize">Enter any Winings</label>
-            <input class="w3-input w3-border" name="prize" id="prize" type="number">
+            <div class="w3-third">
+                <label for="prize">Enter any Winings</label>
+                <input class="w3-input w3-border" name="prize" id="prize" type="number">
             </div>
         </div>
     </form>   
