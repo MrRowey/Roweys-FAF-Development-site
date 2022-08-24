@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 16, 2022 at 09:46 PM
+-- Generation Time: Aug 24, 2022 at 11:36 PM
 -- Server version: 8.0.23
 -- PHP Version: 8.0.3
 
@@ -49,7 +49,7 @@ CREATE TABLE `1v1_data` (
 --
 
 INSERT INTO `1v1_data` (`ID`, `playerID`, `opponentID`, `opponentMatchResultID`, `playerMatchResultID`, `finalsMatch`, `playerFactionID`, `opponentFactionID`, `mapID`, `tournamentID`, `replayID`, `year`, `position`, `income`) VALUES
-(1, 87, 80, 1, 0, 0, 2, 3, 15, 1, 3627915, 2015, NULL, NULL);
+(1, 87, 80, 2, 1, 0, 2, 3, 15, 1, 3627915, 2015, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,128 @@ INSERT INTO `maps` (`ID`, `name`, `sizeID`, `image`, `Avaliable`) VALUES
 (12, 'Arcane', 3, 'Arcane.png', 1),
 (13, 'Artic Refuge', 3, 'Artic_Refuge.png', 1),
 (14, 'Autumn', 3, 'Autumn.png', 1),
-(15, 'Crimson Feud', 1, 'Crimson_Feud.png', 1);
+(16, 'Balmy', 3, 'Balmy.png', 1),
+(17, 'Bloodthrone', 3, 'Bloodthrone.png', 1),
+(18, 'Break V3', 1, 'Break.png', 1),
+(19, 'Broken Vows', 3, 'Broken_Vows.png', 1),
+(40, 'Cadmium Green', 3, 'Cadmium_Green.png', 1),
+(41, 'Canis River', 1, 'Canis_River.png', 1),
+(42, 'Cobalt Valley', 3, 'Cobalt_Valley.png', 1),
+(43, 'Cold Conflict', 1, 'Cold_Conflict.png', 1),
+(44, 'Comet Catcher', 3, 'Comet_Catcher.png', 1),
+(45, 'Crag Dunes', 1, 'Crag_Dunes.png', 1),
+(46, 'Crash Site', 3, 'Crash_Site.png', 1),
+(47, 'Crazy Rush', 1, 'Crazy_Rush.png', 1),
+(48, 'Crimson Feud', 1, 'Crimson_Feud.png', 1),
+(49, 'Crossfire Canal', 6, 'Crossfire_Canal.png', 1),
+(50, 'Darkfall', 3, 'Darkfall.png', 1),
+(51, 'Daroza\'s Sanctuary\r\n', 3, 'Darozas_Sanctuary.png\r\n', 1),
+(52, 'Desert Arena', 1, 'Desert_Arena.png', 1),
+(53, 'Desert Joust', 1, 'Desert_Joust.png', 1),
+(54, 'Desert Planet II', 3, 'Desert_Planet_II.png', 1),
+(55, 'Desolate Dunes', 3, 'Desolate_Dunes.png', 1),
+(56, 'Diversity', 3, 'Diversity.png', 1),
+(57, 'Dry Canyon', 3, 'Dry_Canyon.png', 1),
+(58, 'Dusty Grounds', 1, 'Dusty_Grounds.png', 1),
+(59, 'Emerald Crater', 6, 'Emerald_Crater.png', 1),
+(60, 'Emerald Terraces', 3, 'Emerald_Terraces.png', 1),
+(61, 'Esgaroth\'s Ruins', 1, 'Esgaroths_Ruins.png', 1),
+(62, 'Eye of the Storm', 3, 'EotS.png\r\n', 1),
+(63, 'Festea VII', 3, 'Festea_VII.png', 1),
+(64, 'Fields of Isis', 3, 'Fields_of_Isis.png', 1),
+(65, 'Fields of Thunder', 1, 'Fields_of_Thunder.png', 1),
+(66, 'Finn\'s Revenge', 3, 'Finns_Revenge.png', 1),
+(67, 'Firelight', 1, 'Firelight.png', 1),
+(68, 'Floralis', 1, 'Floralis.png', 1),
+(69, 'Forbidden Pass', 3, 'Forbidden_Pass.png', 1),
+(70, 'Forgotten Facilities', 3, 'Forgotten_Facilities.png', 1),
+(71, 'Four-Leaf Clover', 3, 'Four-Leaf_Clover.png', 1),
+(72, 'Frithen', 3, 'Frithen.png', 1),
+(73, 'Frozen Firefight', 6, 'Frozen_Firefight.png', 1),
+(74, 'Frozen Isis', 3, 'Frozen_Isis.png', 1),
+(75, 'Goodlands', 3, 'Goodlands.png', 1),
+(76, 'HardFFA', 1, 'HardFFA.png', 1),
+(77, 'Havasu Canyon', 6, 'Havasu_Canyon.png', 1),
+(78, 'Haven Reef', 3, 'Haven_Reef.png', 1),
+(79, 'High Noon', 3, 'High_Noon.png', 1),
+(80, 'Hilly Plateau', 3, 'Hilly_Plateau.png', 1),
+(81, 'Huracan', 3, 'Huracan.png', 1),
+(82, 'Icelands', 3, 'Icelands.png', 1),
+(83, 'Jungle Valley', 1, 'Jungle_Valley.png', 1),
+(84, 'Krakens Nest', 6, 'Krakens_Nest.png', 1),
+(85, 'Lake Arokh', 1, 'Lake_Arokh.png', 1),
+(86, 'Last Oasis', 3, 'Last_Oasis.png', 1),
+(87, 'Lena River', 6, 'Lena_River.png', 1),
+(88, 'Loki\r\n', 3, 'Loki.png', 1),
+(89, 'Lost Paradise Island', 6, 'Lost_Paradise_Island.png\r\n', 1),
+(90, 'Lots of Mass', 3, 'Four-Leaf_Clover.png', 1),
+(91, 'Map Generator 5km', 1, 'Map_Generator.png', 1),
+(92, 'Map Generator 10km', 3, 'Map_Generator.png', 1),
+(93, 'Map Generator 15km', 5, 'Map_Generator.png', 1),
+(94, 'Map Generator 20km', 6, 'Map_Generator.png', 1),
+(95, 'Mentor', 6, 'Mentor.png', 1),
+(96, 'Mirage', 1, 'Mirage.png', 1),
+(97, 'Monaki', 1, 'Monaki.png\r\n', 1),
+(98, 'Monster Girl Arena', 3, 'Monster_Girl_Arena.png', 1),
+(99, 'Moonlight', 1, 'Moonlight.png', 1),
+(100, 'Niflheim - Final II', 3, 'Niflheim.png', 1),
+(101, 'Norfair', 6, 'Norfair.png', 1),
+(102, 'Ocil Wetlands', 3, 'Ocil_Wetlands.png', 1),
+(103, 'Open Palms', 3, 'Open_Palms.png', 1),
+(104, 'Open Waters', 3, 'Open_Waters.png', 1),
+(105, 'Open Zeta', 3, 'Open_Zeta.png', 1),
+(106, 'Oracle', 3, 'Oracle.png', 1),
+(107, 'Owly Cliffs', 1, 'Owly_Cliffs.png', 1),
+(108, 'Painted Desert', 6, 'Painted_Desert.png', 1),
+(109, 'Palaneum', 1, 'Palaneum.png', 1),
+(110, 'Pelagial V2', 6, 'Pelagial_V2.png', 1),
+(111, 'Phaaze', 3, 'Phaaze.png', 1),
+(112, 'Point of Reach', 6, 'Point_of_Reach.png', 1),
+(113, 'Polar Depression', 3, 'Polar_Depression.png', 1),
+(114, 'Quantum Sea', 6, 'Quantum_Sea.png', 1),
+(115, 'Red Rocks', 3, 'Red_Rocks.png', 1),
+(116, 'Regor VI Highlands', 3, 'Regor_VI_Highlands.png', 1),
+(117, 'Roanoke Abyss', 6, 'Roanoke_Abyss.png', 1),
+(118, 'Saltrock Colony', 3, 'Saltrock_Colony.png', 1),
+(119, 'Sentry Point', 1, 'Sentry_Point.png', 1),
+(120, 'Seraphim Glaciers', 6, 'Seraphim_Glaciers.png', 1),
+(121, 'Seraphim Outpost', 3, 'Seraphim_Outpost.png', 1),
+(122, 'Seraphim Outpost EP', 6, 'Seraphim_Outpost_EP.png', 1),
+(123, 'Serenity Desert', 3, 'Serenity_Desert.png', 1),
+(124, 'Serenity Desert Small', 1, 'Serenity_Desert_Small.png', 1),
+(125, 'Sirgis', 6, 'Sirgis.png', 1),
+(126, 'Standing Stones', 3, 'Standing_Stones.png', 1),
+(127, 'Stella Maris', 3, 'Stella_Maris.png', 1),
+(128, 'Stickleback Ridge', 1, 'Stickleback_Ridge.png', 1),
+(129, 'Strife of Titan R1', 6, 'Strife_of_Titan_R1.png', 1),
+(130, 'Summer Duel', 1, 'Summer_Duel.png', 1),
+(131, 'Syrtis Major', 3, 'Syrtis_Major.png', 1),
+(132, 'Seton\'s Clutch', 6, 'Setons_Clutch.png', 1),
+(133, 'TAG Craftious Maximus', 3, 'TAG_Craftious_Maximus.png', 1),
+(134, 'Taylors Pass', 6, 'Taylors_Pass.png', 1),
+(135, 'The Bermuda Locket', 6, 'The_Bermuda_Locket.png', 1),
+(136, 'The Cold Place', 3, 'The_Cold_Place.png', 1),
+(137, 'The Dark Heart', 3, 'The_Dark_Heart.png', 1),
+(138, 'The Ditch', 6, 'The_Ditch.png', 1),
+(139, 'The Drunken Beetles Dance', 6, 'The_Drunken_Beetles_Dance.png', 1),
+(140, 'The Ganges Chasma', 1, 'The_Ganges_Chasma.png', 1),
+(141, 'Therum', 6, 'Therum.png', 1),
+(142, 'Theta Passage', 1, 'Theta_Passage.png', 1),
+(143, 'Turtle Rocks', 3, 'Turtle_Rocks.png', 1),
+(144, 'Twin Rivers', 3, 'Twin_Rivers.png', 1),
+(145, 'Vale of Isis', 1, 'Vale_of_Isis.png', 1),
+(146, 'Varga Pass', 3, 'Varga_Pass.png', 1),
+(147, 'Veil of Stars', 3, 'Veil_of_Stars.png', 1),
+(148, 'Vesta', 3, 'Vesta.png', 1),
+(149, 'Vulcan\'s Reach', 3, 'Vulcans_Reach.png', 1),
+(150, 'Vya-3 Protectorate', 3, 'Vya-3_Protectorate.png', 1),
+(151, 'White Fire', 3, 'White_Fire.png', 1),
+(152, 'Williamson\'s Bridge', 1, 'Williamsons_Bridge.png', 1),
+(153, 'X6', 6, 'X6.png', 1),
+(154, 'Xmas Setons', 6, 'Xmas_Setons.png', 1),
+(155, 'Zerg Canyon', 3, 'Zerg_Canyon.png', 1),
+(156, 'Zeuthea Valley', 3, 'Zeuthea_Valley.png', 1),
+(157, '8-Badlands_v4', 3, '8-Badlands_v4.png', 1);
 
 -- --------------------------------------------------------
 
@@ -187,19 +308,30 @@ INSERT INTO `match_result` (`ID`, `result`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player`
+-- Table structure for table `opponent_to_data`
 --
 
-CREATE TABLE `player` (
+CREATE TABLE `opponent_to_data` (
+  `ID` int NOT NULL,
+  `playersID` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `players`
+--
+
+CREATE TABLE `players` (
   `ID` int NOT NULL,
   `username` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `player`
+-- Dumping data for table `players`
 --
 
-INSERT INTO `player` (`ID`, `username`) VALUES
+INSERT INTO `players` (`ID`, `username`) VALUES
 (1, 'Abandoned'),
 (2, 'AchievedJaguar8'),
 (3, 'Adjux'),
@@ -397,14 +529,14 @@ INSERT INTO `player` (`ID`, `username`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `player_to_data`
+-- Table structure for table `players_to_data`
 --
 
-CREATE TABLE `player_to_data` (
+CREATE TABLE `players_to_data` (
   `ID` int NOT NULL,
-  `aliasID` int NOT NULL,
-  `playerID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `Player` varchar(50) NOT NULL,
+  `Opponent` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -536,15 +668,21 @@ ALTER TABLE `match_result`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player`
+-- Indexes for table `opponent_to_data`
 --
-ALTER TABLE `player`
+ALTER TABLE `opponent_to_data`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `player_to_data`
+-- Indexes for table `players`
 --
-ALTER TABLE `player_to_data`
+ALTER TABLE `players`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `players_to_data`
+--
+ALTER TABLE `players_to_data`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -591,7 +729,7 @@ ALTER TABLE `faction`
 -- AUTO_INCREMENT for table `maps`
 --
 ALTER TABLE `maps`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `map_size`
@@ -606,15 +744,21 @@ ALTER TABLE `match_result`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `player`
+-- AUTO_INCREMENT for table `opponent_to_data`
 --
-ALTER TABLE `player`
+ALTER TABLE `opponent_to_data`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `players`
+--
+ALTER TABLE `players`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
--- AUTO_INCREMENT for table `player_to_data`
+-- AUTO_INCREMENT for table `players_to_data`
 --
-ALTER TABLE `player_to_data`
+ALTER TABLE `players_to_data`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
