@@ -7,8 +7,6 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,12 +62,12 @@ if (mysqli_connect_errno()) {
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-dark-gray w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="/index.php" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-    <a href="/about.php" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-    <a href="/datahub.php" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
-    <a href="/contact.php" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
-    <a href="/login.php" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="/index.php" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="/about.php" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="/datahub.php" onclick="w3_close()" class="w3-bar-item w3-button">DataHub</a>
+  <a href="/contact.php" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+  <a href="/login.php" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>
 </nav>
 
 <!-- Header with full-height image -->
